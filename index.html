@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Intro</title>
+</head>
+
+<body>
+  <h1 id="h1"></h1>
+  <hr>
+  <p id="root"></p>
+  <hr>
+  <p id="author"></p>
+  <script type="text/babel">
+    // id y variables
+    const idH1 = document.getElementById('h1');
+    const idRoot = document.getElementById('root');
+    const idAuthor = document.getElementById('author');
+    const name = "Number 6";
+    const newDate = new Date();
+    const year = newDate.getFullYear();
+    // Contenido
+    const contentH1 = <span>React Intro about {name}!</span>;
+    const contentRoot = <span>Lorem ipsum dolor sit,
+    amet consectetur adipisicing elit.Quae rerum voluptatum
+  accusantium optio ipsum necessitatibus sapiente qui dicta sint, ipsa dolore nihil minima, id omnis fugit nulla
+  blanditiis, animi excepturi ? ...this year <b>{year}</b>!</span> ;
+  const contentAuthor = <span>Aurelio <b>Greco</b></span> ;
+    // ReactDom
+    ReactDOM.render(contentH1, idH1);
+    ReactDOM.render(contentRoot, idRoot);
+    ReactDOM.render(contentAuthor, idAuthor);
+  </script>
+  <!-- Cargat React -->
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</body>
+
+</html>
